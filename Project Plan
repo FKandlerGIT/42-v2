@@ -7,13 +7,13 @@ Dies hilft, eine strukturierte Herangehensweise beim Erstellen der Funktionen zu
 ## 🟩 1. Zeichenprüfung & ASCII-Funktionen (unabhängig, gute Einsteigerübungen)
 Diese brauchst du für viele andere Aufgaben später (z. B. `ft_atoi`, `ft_is*` Checks):
 
-- [ ] `ft_isalpha` – Überprüft, ob ein Zeichen alphabetisch ist
-- [ ] `ft_isdigit` – Überprüft, ob ein Zeichen eine Zahl ist
-- [ ] `ft_isalnum` – Überprüft, ob ein Zeichen alphanumerisch ist
-- [ ] `ft_isascii` – Überprüft, ob ein Zeichen im ASCII-Zeichensatz enthalten ist
-- [ ] `ft_isprint` – Überprüft, ob ein Zeichen druckbar ist
-- [ ] `ft_tolower` – Wandelt ein Zeichen in Kleinbuchstaben um
-- [ ] `ft_toupper` – Wandelt ein Zeichen in Großbuchstaben um
+- [x] `ft_isalpha` – Überprüft, ob ein Zeichen alphabetisch ist
+- [x] `ft_isdigit` – Überprüft, ob ein Zeichen eine Zahl ist
+- [x] `ft_isalnum` – Überprüft, ob ein Zeichen alphanumerisch ist
+- [x] `ft_isascii` – Überprüft, ob ein Zeichen im ASCII-Zeichensatz enthalten ist
+- [x] `ft_isprint` – Überprüft, ob ein Zeichen druckbar ist
+- [x] `ft_tolower` – Wandelt ein Zeichen in Kleinbuchstaben um
+- [x] `ft_toupper` – Wandelt ein Zeichen in Großbuchstaben um
 
 ---
 

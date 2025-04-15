@@ -1,6 +1,8 @@
 # Libft Projektplan
 
-Dies ist die Liste der Funktionen, die in deiner Libft-Bibliothek enthalten sein müssen. Die Funktionen sind in thematisch sinnvolle Blöcke unterteilt, basierend auf Abhängigkeiten und Komplexität. Dies hilft, eine strukturierte Herangehensweise beim Erstellen der Funktionen zu gewährleisten.
+Dies ist die Liste der Funktionen, die in deiner Libft-Bibliothek enthalten sein müssen.
+Die Funktionen sind in thematisch sinnvolle Blöcke unterteilt, basierend auf Abhängigkeiten und Komplexität.
+Dies hilft, eine strukturierte Herangehensweise beim Erstellen der Funktionen zu gewährleisten.
 
 ## 🟩 1. Zeichenprüfung & ASCII-Funktionen (unabhängig, gute Einsteigerübungen)
 Diese brauchst du für viele andere Aufgaben später (z. B. `ft_atoi`, `ft_is*` Checks):

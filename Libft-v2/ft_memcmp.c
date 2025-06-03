@@ -1,18 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 12:43:17 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/02 12:43:22 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/03 12:04:12 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/03 12:57:35 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum (int c)
+int ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-    if(ft_isalpha(c) || ft_isdigit(c))
-        return 1;
-    return 0;
+	const unsigned char *a = (unsigned char *)s1;
+	const unsigned char *b = (unsigned char *)s2;
+	size_t i;
+	i = 0;
+	
+	while(i < n)
+	{
+		if(a[i] != b[i])
+			return (a[i] - b[i]);
+		i++;
+	}
+	return 0;
 }

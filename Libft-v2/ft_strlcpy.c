@@ -1,18 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 12:43:17 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/02 12:43:22 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/03 14:47:28 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/03 17:35:21 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum (int c)
+size_t ft_strlcpy(char *dst, const char *src, size_t size)
 {
-    if(ft_isalpha(c) || ft_isdigit(c))
-        return 1;
-    return 0;
+	size_t i;
+	i = 0;
+
+	while((i + 1 < size) &&(src[i] != '\0') )
+	{
+		dst[i] = src[i];	
+		i++;
+	}
+	
+	if(size > 0)
+		dst[i] = '\0';
+
+	while(src[i] != '\0')
+		i++;
+
+	return i;
+	
 }
+
+					

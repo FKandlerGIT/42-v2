@@ -1,18 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 12:43:17 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/02 12:43:22 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/02 13:26:55 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/02 13:35:04 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum (int c)
+void bzero(void *s, size_t n)
 {
-    if(ft_isalpha(c) || ft_isdigit(c))
-        return 1;
-    return 0;
+	ft_memset(s, 0, n)
 }

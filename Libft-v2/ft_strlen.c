@@ -1,18 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/02 12:43:17 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/02 12:43:22 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/02 19:26:01 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/02 19:43:08 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isalnum (int c)
+size_t strlen(const char *s)
 {
-    if(ft_isalpha(c) || ft_isdigit(c))
-        return 1;
-    return 0;
+	size_t i;
+	i = 0;
+	while(s[i] != '\0')
+	i++;
+
+	return i;
 }

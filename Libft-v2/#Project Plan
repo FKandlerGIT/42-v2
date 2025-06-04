@@ -27,7 +27,7 @@ Diese Funktionen sind entscheidend für den Umgang mit Speicher und Buffer-Verwa
 - [x] `ft_memchr` – Sucht nach einem Wert in einem Speicherbereich
 - [x] `ft_memcmp` – Vergleicht zwei Speicherbereiche
 - [x] `ft_calloc` – Allokiert Speicher und setzt ihn auf 0 (nutzt oft `ft_bzero`)
-- [ ] `ft_strdup` – Erstellt eine Kopie eines Strings (nutzt `ft_strlen` und `malloc`, also ist `ft_calloc` praktisch)
+- [x] `ft_strdup` – Erstellt eine Kopie eines Strings (nutzt `ft_strlen` und `malloc`, also ist `ft_calloc` praktisch)
 
 ---
 
@@ -35,11 +35,11 @@ Diese Funktionen sind entscheidend für den Umgang mit Speicher und Buffer-Verwa
 Diese Funktionen helfen dir, mit Strings zu arbeiten, ohne dynamischen Speicher zu verwenden.
 
 - [x] `ft_strlen` – Berechnet die Länge eines Strings
-- [ ] `ft_strchr` – Sucht das erste Vorkommen eines Zeichens in einem String
-- [ ] `ft_strrchr` – Sucht das letzte Vorkommen eines Zeichens in einem String
-- [ ] `ft_strncmp` – Vergleicht zwei Strings lexikografisch bis zu einer bestimmten Länge
+- [x] `ft_strchr` – Sucht das erste Vorkommen eines Zeichens in einem String
+- [x] `ft_strrchr` – Sucht das letzte Vorkommen eines Zeichens in einem String
+- [x] `ft_strncmp` – Vergleicht zwei Strings lexikografisch bis zu einer bestimmten Länge
 - [ ] `ft_strnstr` – Sucht nach einem String in einem anderen String
-- [ ] `ft_strlcpy` – Kopiert einen String mit Längenbegrenzung (braucht `ft_strlen`)
+- [x] `ft_strlcpy` – Kopiert einen String mit Längenbegrenzung (braucht `ft_strlen`)
 - [ ] `ft_strlcat` – Fügt einen String mit Längenbegrenzung an einen anderen an (braucht `ft_strlen`)
 
 ---

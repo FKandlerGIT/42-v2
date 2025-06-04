@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:48:00 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/02 14:42:52 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/04 19:23:03 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void *ft_memset(void *s, unsigned char c, size_t n)
 	i = n;
 	while(i > 0)
 	{
+		i--;
 		ptr[i] = c;
-		i++;
 	}
 	return s;
 }

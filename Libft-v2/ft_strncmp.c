@@ -1,24 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 17:36:37 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/04 16:23:49 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/04 20:25:45 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/04 20:34:06 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	char *dst;
-	size_t len;
-	len = ft_strlen(s);
-	dst = ft_calloc(len + 1, sizeof(char));
 	
-	ft_strlcpy(dst, s, len + 1);
-	return dst;
+	size_t i;
+	i = 0;
+	
+	while(i < n && (s1[i] != '\0'  || s2[i] != '\0'))
+	{
+		if(s1[i] != s2[i])
+			return (s1[i] - s2[i]);
+		i++;
+	}
+	return 0;
 }

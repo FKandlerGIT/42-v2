@@ -1,24 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 17:36:37 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/04 16:23:49 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/04 19:25:24 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/04 19:39:42 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strdup(const char *s)
+char *ft_strchr(const char *s, int c)
 {
-	char *dst;
-	size_t len;
-	len = ft_strlen(s);
-	dst = ft_calloc(len + 1, sizeof(char));
+	size_t i;
+	i = 0;
 	
-	ft_strlcpy(dst, s, len + 1);
-	return dst;
+	while(s[i] != '\0')
+	{
+		if(s[i] == (unsigned char) c)
+			return (s + i);
+	
+		i++;
+	}
+	if(c == '\0')
+		return(s + i);
+	return NULL;
 }

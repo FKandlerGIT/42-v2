@@ -21,10 +21,11 @@ char *ft_strnstr(const char *dst, const char *src, size_t len)
 	if(!src)
 		return dst;
 
-	ft_strncmp(src[i], dst[i], maxLen);
+	else 
+		ft_strncmp(src[i], dst[i], maxLen);
 	if(src[i] == dst[i])
 		return(dst + 1);
-	else if(src[i] != dst[i])
+	else if(src[i] < dst[i] || (src[i] != dst[i]))
 		return NULL;
 	
 }

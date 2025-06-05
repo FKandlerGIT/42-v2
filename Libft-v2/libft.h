@@ -27,7 +27,7 @@ int ft_isprint(int c);
 int ft_tolower(int c);
 int ft_tolower(int c);
 void *ft_memset(void *s, unsigned char c, size_t n);
-void bzero(void *s, size_t n);
+void ft_bzero(void *s, size_t n);
 void *ft_memcpy(void *dest, const void *src, size_t n);
 void *ft_memchr(const void *s, int c, size_t n);
 int ft_memcmp(const void *s1, const void *s2, size_t n);

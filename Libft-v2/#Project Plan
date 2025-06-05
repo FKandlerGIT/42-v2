@@ -38,9 +38,9 @@ Diese Funktionen helfen dir, mit Strings zu arbeiten, ohne dynamischen Speicher 
 - [x] `ft_strchr` – Sucht das erste Vorkommen eines Zeichens in einem String
 - [x] `ft_strrchr` – Sucht das letzte Vorkommen eines Zeichens in einem String
 - [x] `ft_strncmp` – Vergleicht zwei Strings lexikografisch bis zu einer bestimmten Länge
-- [ ] `ft_strnstr` – Sucht nach einem String in einem anderen String
+- [x] `ft_strnstr` – Sucht nach einem String in einem anderen String
 - [x] `ft_strlcpy` – Kopiert einen String mit Längenbegrenzung (braucht `ft_strlen`)
-- [ ] `ft_strlcat` – Fügt einen String mit Längenbegrenzung an einen anderen an (braucht `ft_strlen`)
+- [x] `ft_strlcat` – Fügt einen String mit Längenbegrenzung an einen anderen an (braucht `ft_strlen`)
 
 ---
 

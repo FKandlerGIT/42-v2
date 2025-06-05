@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchar.c                                      :+:      :+:    :+:   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/04 19:42:03 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/05 15:44:10 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/05 20:28:48 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/05 20:41:13 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strrchr(const char *s, int c)
+char *ft_itoa(int n)
 {
+	if((n > 2147483647) || (-2147483648))
+		return (1);
+	while(n != 0)
+		
 	
-	size_t i;
-	i = ft_strlen(s);
-	if	(c == '\0')
-		return (char *)(s + i);
 	
-	while(i > 0)
-	{
-		i--;
-		if(s[i] == (unsigned char) c)
-			return (char*)(s + i);
-	}
-		return NULL;
 }

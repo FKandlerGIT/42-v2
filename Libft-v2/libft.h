@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 12:50:07 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/05 17:46:25 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/06 13:28:50 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,5 +38,6 @@ char *ft_strchr(const char *s, int c);
 int ft_strncmp(const char *s1, const char *s2, size_t n);
 char *ft_strnstr(const char *haystack, const char *needle, size_t len);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+int ft_atoi(const char *str);
 
 #endif

@@ -52,7 +52,7 @@ Diese Funktionen arbeiten mit dynamischem Speicher (malloc, calloc) und sind fü
 - [x] `ft_strtrim` – Entfernt unerwünschte Zeichen am Anfang und Ende eines Strings
 - [x] `ft_split` – Teilt einen String in mehrere Teile, basierend auf einem Trennzeichen
 - [x] `ft_strmapi` – Wendet eine Funktion auf jeden Charakter eines Strings an
-- [ ] `ft_striteri` – Wendet eine Funktion auf jeden Charakter eines Strings mit Index an
+- [x] `ft_striteri` – Wendet eine Funktion auf jeden Charakter eines Strings mit Index an
 
 ---
 
@@ -62,9 +62,9 @@ Diese Funktionen helfen dir, Zahlen in Strings zu konvertieren und Ausgaben zu s
 - [x] `ft_itoa` – Wandelt eine Zahl in einen String um
 - [x] `ft_atoi` – Wandelt einen String in eine Zahl um
     - **Tipp**: Nutzt `ft_isdigit`, evtl. `isspace` (weiß, wie du Leerzeichen überspringen kannst)
-- [ ] `ft_putchar_fd` – Gibt ein Zeichen an eine Datei aus
-- [ ] `ft_putstr_fd` – Gibt einen String an eine Datei aus
-- [ ] `ft_putendl_fd` – Gibt einen String gefolgt von einem Zeilenumbruch an eine Datei aus
-- [ ] `ft_putnbr_fd` – Gibt eine Zahl an eine Datei aus
+- [x] `ft_putchar_fd` – Gibt ein Zeichen an eine Datei aus
+- [x] `ft_putstr_fd` – Gibt einen String an eine Datei aus
+- [x] `ft_putendl_fd` – Gibt einen String gefolgt von einem Zeilenumbruch an eine Datei aus
+- [x] `ft_putnbr_fd` – Gibt eine Zahl an eine Datei aus
     - **Tipp**: Hier kannst du `ft_itoa` verwenden, um die Zahl in einen String zu konvertieren, bevor du sie ausgibst
 

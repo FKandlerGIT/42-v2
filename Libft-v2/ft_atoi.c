@@ -6,12 +6,11 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 13:26:03 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/09 12:50:18 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:50:51 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 int	ft_atoi(const char *str)
 {
@@ -35,4 +34,3 @@ int	ft_atoi(const char *str)
 	}
 	return (result * sign);
 }
-

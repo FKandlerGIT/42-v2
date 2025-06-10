@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 21:15:17 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/09 21:19:39 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:33:04 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,6 @@ void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 	}
 }
 /*
-
-	change each character (directly in this string)at position 'i' in 'str' via the function (placeholder f)
-	
+** change each character (directly in this string)
+** at position 'i' in 'str' via the function (placeholder f)
 */

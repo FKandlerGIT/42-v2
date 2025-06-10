@@ -6,12 +6,11 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/05 20:28:48 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/09 14:28:28 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/10 20:35:20 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
 
 static int	count_digits(int n)
 {
@@ -56,18 +55,17 @@ char	*ft_itoa(int num)
 }
 
 /*
-
-	first of all i check if my value is equal the min_int, if so i return it directly
-	as a string as i return all my values as positive in the string and then just putting a minus sign in beforehand,
-	but because 2147483648 does not exist as a positive value in int, i return it immediatly.
-	then i check if my number in generell is negative and if so i will remember the system to put a minus char at position "0",
-	so it will be infront of the string.
-	then i will count the length of my int + negative to allocate the right amount of space,
-	as negative will only allocate + 1 if the number is negative otherwise it will be + 0 .
-	then i allocate length + 1 for the '\0' terminator .
-	then i check if i have a str(int) to check if allocation was succesfull.
-	then ill check for negative as i explained it before,
-	i will use long here to ensure no missbehavior will happen for min _int (avoid accidental overflows, avoid sign related bugs, easier adapt to larger types).
-	then lastly i'll iterate backwards to my string and change my int's finally into char's
-
+** First of all I check if my value is equal to MIN_INT.
+** If so, I return it directly as a string, since I return
+** all values as positive in the string and just add the minus
+** sign at the start.
+** But because 2147483648 does not exist as a positive int,
+** I return it immediately.
+** Then I check if the number is negative, and if so, I
+** remember to place the minus char at position 0.
+** Next I count the length of my int +1 if negative, then
+** allocate that length +1 for the '\0' terminator.
+** I then verify if allocation was successful. Finally, I use
+** long to avoid sign issues or overflows, then iterate
+** backwards through the string, converting digits into chars.
 */

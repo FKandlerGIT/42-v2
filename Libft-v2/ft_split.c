@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 17:25:43 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/09 20:41:29 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:51:25 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,7 +58,7 @@ static char	*set_word(char **str, char symbol)
 	wordlen = 0;
 	while ((*str)[wordlen] && (*str)[wordlen] != symbol)
 		wordlen++;
-	result_string = (char *)ft_calloc((wordlen + 1) , sizeof(char));
+	result_string = (char *)ft_calloc((wordlen + 1), sizeof(char));
 	if (!result_string)
 		return (NULL);
 	ft_strlcpy(result_string, *str, wordlen + 1);
@@ -75,7 +75,7 @@ char	**ft_split(const char *str, char symbol)
 
 	s = (char *)str;
 	word_count = ft_wordcount(str, symbol);
-	result = (char **)ft_calloc((word_count + 1) , sizeof(char *));
+	result = (char **)ft_calloc((word_count + 1), sizeof(char *));
 	if (!result)
 		return (NULL);
 	i = 0;
@@ -94,9 +94,3 @@ char	**ft_split(const char *str, char symbol)
 	result[i] = NULL;
 	return (result);
 }
-
-
-
-
-
-

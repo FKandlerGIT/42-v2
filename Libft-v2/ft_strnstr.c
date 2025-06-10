@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 20:39:34 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/05 15:51:36 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:51:57 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,9 +21,9 @@ char	*ft_strnstr(const char *dst, const char *src, size_t len)
 	i = 0;
 	if (!src[i])
 		return ((char *)(dst));
-	while (i + ft_strlen (src) <= maxlen)
+	while (i + ft_strlen(src) <= maxlen)
 	{
-		if (ft_strncmp (dst + i, src, ft_strlen (src)) == 0)
+		if (ft_strncmp(dst + i, src, ft_strlen(src)) == 0)
 			return ((char *)(dst + i));
 		else
 			i++;
@@ -33,10 +33,10 @@ char	*ft_strnstr(const char *dst, const char *src, size_t len)
 
 /*
 
-get maxLen;
-get String1;
-	if string1 empty return dst;
-move to String2;
+get		maxLen;
+get		String1;
+	if string1 empty return (dst);
+move to	String2;
 if current position[i] + strlen(src) < maxLen
 {
 check if first char of string1 match char of string2;

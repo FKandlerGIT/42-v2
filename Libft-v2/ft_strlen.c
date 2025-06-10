@@ -6,18 +6,18 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/02 19:26:01 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/02 19:43:08 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:51:55 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t strlen(const char *s)
+size_t	strlen(const char *s)
 {
-	size_t i;
-	i = 0;
-	while(s[i] != '\0')
-	i++;
+	size_t	i;
 
-	return i;
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }

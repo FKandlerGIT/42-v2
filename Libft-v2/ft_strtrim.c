@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/09 15:52:44 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/09 16:08:19 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:51:59 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,9 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	size_t i;
-	size_t j;
+	size_t	i;
+	size_t	j;
+
 	i = 0;
 	if (!s1 || !set)
 		return (NULL);
@@ -25,6 +26,6 @@ char	*ft_strtrim(char const *s1, char const *set)
 	while (j > 0 && ft_strchr(set, s1[j - 1]))
 		j--;
 	if (i >= j)
-    return (ft_strdup(""));
-return (ft_substr(s1, i, j - i));
+		return (ft_strdup(""));
+	return (ft_substr(s1, i, j - i));
 }

@@ -1,38 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/06 13:26:03 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/09 12:50:18 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/09 21:15:17 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/09 21:19:39 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int	ft_atoi(const char *str)
+void	ft_striteri(char *str, void (*f)(unsigned int, char *))
 {
-	int	result;
-	int	sign;
+	unsigned int	i;
 
-	result = 0;
-	sign = 1;
-	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
-		str++;
-	if (*str == '-' || *str == '+')
+	i = 0;
+	while (str[i] != '\0')
 	{
-		if (*str == '-')
-			sign = -1;
-		str++;
+		f(i, &str[i]);
+		i++;
 	}
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10 + (*str - '0');
-		str++;
-	}
-	return (result * sign);
 }
+/*
 
+	change each character (directly in this string)at position 'i' in 'str' via the function (placeholder f)
+	
+*/

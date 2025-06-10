@@ -1,38 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/06 13:26:03 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/09 12:50:18 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/09 14:48:44 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/09 14:49:13 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-
-int	ft_atoi(const char *str)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	result;
-	int	sign;
+	size_t	strlength;
+	char	*substring;
 
-	result = 0;
-	sign = 1;
-	while (*str == ' ' || (*str >= '\t' && *str <= '\r'))
-		str++;
-	if (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			sign = -1;
-		str++;
-	}
-	while (*str >= '0' && *str <= '9')
-	{
-		result = result * 10 + (*str - '0');
-		str++;
-	}
-	return (result * sign);
+	strlength = ft_strlen(s);
+	if (s == NULL)
+		return (NULL);
+	if (start >= strlength)
+		return (ft_strdup(""));
+	if (start + len > strlength)
+		len = strlength - start;
+	substring = (char *)malloc(len + 1);
+	if (substring == NULL)
+		return (NULL);
+	ft_strlcpy(substring, s += start, len + 1);
+	return (substring);
 }
-

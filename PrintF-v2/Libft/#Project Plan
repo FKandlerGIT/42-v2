@@ -1,0 +1,70 @@
+# Libft Projektplan
+
+Dies ist die Liste der Funktionen, die in deiner Libft-Bibliothek enthalten sein müssen.
+Die Funktionen sind in thematisch sinnvolle Blöcke unterteilt, basierend auf Abhängigkeiten und Komplexität.
+Dies hilft, eine strukturierte Herangehensweise beim Erstellen der Funktionen zu gewährleisten.
+
+## 🟩 1. Zeichenprüfung & ASCII-Funktionen (unabhängig, gute Einsteigerübungen)
+Diese brauchst du für viele andere Aufgaben später (z. B. `ft_atoi`, `ft_is*` Checks):
+
+- [x] `ft_isalpha` – Überprüft, ob ein Zeichen alphabetisch ist
+- [x] `ft_isdigit` – Überprüft, ob ein Zeichen eine Zahl ist
+- [x] `ft_isalnum` – Überprüft, ob ein Zeichen alphanumerisch ist
+- [x] `ft_isascii` – Überprüft, ob ein Zeichen im ASCII-Zeichensatz enthalten ist
+- [x] `ft_isprint` – Überprüft, ob ein Zeichen druckbar ist
+- [x] `ft_tolower` – Wandelt ein Zeichen in Kleinbuchstaben um
+- [x] `ft_toupper` – Wandelt ein Zeichen in Großbuchstaben um
+
+---
+
+## 🟦 2. Speicherfunktionen (Grundlagen für alles mit malloc oder Buffer)
+Diese Funktionen sind entscheidend für den Umgang mit Speicher und Buffer-Verwaltung, was dir später bei vielen dynamischen Operationen hilft.
+
+- [x] `ft_memset` – Setzt einen Bereich im Speicher auf einen bestimmten Wert
+- [x] `ft_bzero` – Setzt einen Bereich im Speicher auf 0 (nutzt meist `ft_memset`)
+- [x] `ft_memcpy` – Kopiert einen Speicherbereich
+- [x] `ft_memmove` – Verschiebt einen Speicherbereich (mit Überlappung – aber wichtig!)
+- [x] `ft_memchr` – Sucht nach einem Wert in einem Speicherbereich
+- [x] `ft_memcmp` – Vergleicht zwei Speicherbereiche
+- [x] `ft_calloc` – Allokiert Speicher und setzt ihn auf 0 (nutzt oft `ft_bzero`)
+- [x] `ft_strdup` – Erstellt eine Kopie eines Strings (nutzt `ft_strlen` und `malloc`, also ist `ft_calloc` praktisch)
+
+---
+
+## 🟨 3. Stringfunktionen – ohne malloc (Vorbereitung für späteres)
+Diese Funktionen helfen dir, mit Strings zu arbeiten, ohne dynamischen Speicher zu verwenden.
+
+- [x] `ft_strlen` – Berechnet die Länge eines Strings
+- [x] `ft_strchr` – Sucht das erste Vorkommen eines Zeichens in einem String
+- [x] `ft_strrchr` – Sucht das letzte Vorkommen eines Zeichens in einem String
+- [x] `ft_strncmp` – Vergleicht zwei Strings lexikografisch bis zu einer bestimmten Länge
+- [x] `ft_strnstr` – Sucht nach einem String in einem anderen String
+- [x] `ft_strlcpy` – Kopiert einen String mit Längenbegrenzung (braucht `ft_strlen`)
+- [x] `ft_strlcat` – Fügt einen String mit Längenbegrenzung an einen anderen an (braucht `ft_strlen`)
+
+---
+
+## 🟧 4. Stringfunktionen – mit malloc (dynamisch)
+Diese Funktionen arbeiten mit dynamischem Speicher (malloc, calloc) und sind für komplexe Stringmanipulationen wichtig.
+
+- [x] `ft_substr` – Gibt einen Teilstring eines Strings zurück
+- [x] `ft_strjoin` – Verbindet zwei Strings zu einem neuen
+- [x] `ft_strtrim` – Entfernt unerwünschte Zeichen am Anfang und Ende eines Strings
+- [x] `ft_split` – Teilt einen String in mehrere Teile, basierend auf einem Trennzeichen
+- [x] `ft_strmapi` – Wendet eine Funktion auf jeden Charakter eines Strings an
+- [x] `ft_striteri` – Wendet eine Funktion auf jeden Charakter eines Strings mit Index an
+
+---
+
+## 🟥 5. Konvertierung & Ausgabe
+Diese Funktionen helfen dir, Zahlen in Strings zu konvertieren und Ausgaben zu steuern.
+
+- [x] `ft_itoa` – Wandelt eine Zahl in einen String um
+- [x] `ft_atoi` – Wandelt einen String in eine Zahl um
+    - **Tipp**: Nutzt `ft_isdigit`, evtl. `isspace` (weiß, wie du Leerzeichen überspringen kannst)
+- [x] `ft_putchar_fd` – Gibt ein Zeichen an eine Datei aus
+- [x] `ft_putstr_fd` – Gibt einen String an eine Datei aus
+- [x] `ft_putendl_fd` – Gibt einen String gefolgt von einem Zeilenumbruch an eine Datei aus
+- [x] `ft_putnbr_fd` – Gibt eine Zahl an eine Datei aus
+    - **Tipp**: Hier kannst du `ft_itoa` verwenden, um die Zahl in einen String zu konvertieren, bevor du sie ausgibst
+

@@ -1,18 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_char.c                                       :+:      :+:    :+:   */
+/*   print_digit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/12 21:08:52 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/18 20:19:01 by codespace        ###   ########.fr       */
+/*   Created: 2025/06/18 20:38:54 by codespace         #+#    #+#             */
+/*   Updated: 2025/06/18 21:26:47 by codespace        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	print_char(int c)
+int print_digit(int n)
 {
-	ft_putchar_fd(c, 1);
+    int len;
+    int m;
+    
+    m = n;
+    len = 0;
+    if(n == 0)
+        return (1);
+    if (n < 0)
+    {
+        len++;
+        n = -n;
+    }
+    while(n != 0)
+    {
+        len++;
+        n = n / 10;
+    }
+    ft_putnbr_fd(m, 1);
+    return(len);   
 }

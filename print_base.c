@@ -1,23 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   print_hex.c                                        :+:      :+:    :+:   */
+/*   print_base.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/18 21:32:45 by codespace         #+#    #+#             */
-/*   Updated: 2025/06/19 13:53:01 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/19 13:38:02 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/19 14:32:39 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	print_hex(int base, const char *symbols)
+int	unsigned_fd(unsigned int n, int base, const char *symbols, int fd)
 {
-	
+	int	count;
+
+	count = 0;
+	if (n >= base)
 	{
-		len++;
-		n = n / 16;		// exampl: 1234 is one number, by dividing it i split it in '1' size "chars" that i can count
+		count = unsigned_fd(n / base, base, symbols, fd);
+		ft_putchar_fd(symbols[n % base], fd);
+		return (count + 1);
 	}
-	return (len);
+	else if (n < base)
+		ft_putchar_fd(symbols[n]);
+	return (1);
 }

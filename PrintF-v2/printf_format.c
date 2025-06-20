@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:41:10 by codespace         #+#    #+#             */
-/*   Updated: 2025/06/20 18:02:53 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/20 20:06:10 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,9 @@
 
 int	print_format(char format, va_list args)
 {
-	if (format == 'd' || format == 'i')
+	if (format == 'c')
+		return(print_char(va_arg(args, int)));
+	else if (format == 'd' || format == 'i')
 		return (print_digit(va_arg(args, int)));
 	else if (format == 's')
 		return (print_str(va_arg(args, char *)));

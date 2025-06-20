@@ -6,11 +6,11 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 20:03:00 by codespace         #+#    #+#             */
-/*   Updated: 2025/06/20 17:47:16 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/20 18:02:47 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	print_str(char *c)
 {

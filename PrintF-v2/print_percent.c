@@ -6,11 +6,11 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/20 16:09:46 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/20 17:46:32 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/20 18:02:36 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	print_percent(void)
 {

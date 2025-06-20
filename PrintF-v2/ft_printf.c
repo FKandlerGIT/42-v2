@@ -5,12 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/12 19:00:40 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/12 21:06:14 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/20 18:03:47 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/20 18:03:48 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libftprintf.h"
+#include "ft_printf.h"
 
 int	ft_printf(const char *format, ...)
 {

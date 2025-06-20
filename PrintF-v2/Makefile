@@ -6,11 +6,11 @@
 #    By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/11 14:00:36 by fekandle          #+#    #+#              #
-#    Updated: 2025/06/20 16:01:25 by fekandle         ###   ########.fr        #
+#    Updated: 2025/06/20 18:09:56 by fekandle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = libftprintf.a
+NAME = ft_printf.a
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror
 SRC = $(wildcard *.c) 
@@ -21,7 +21,7 @@ LIBFT_MAKE = make -C $(LIBFT)
 all: $(NAME)
 
 $(NAME): $(OBJ) $(LIBFT)/libft.a
-	$(AR) rcs $(NAME) $(OBJ) $(LIBFT)/libft.a
+	$(AR) rcs $(NAME) $(OBJ) 
 	
 $(LIBFT)/libft.a:
 		$(LIBFT_MAKE)

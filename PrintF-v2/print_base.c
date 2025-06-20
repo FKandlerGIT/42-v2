@@ -6,13 +6,13 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/19 13:38:02 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/19 14:32:39 by fekandle         ###   ########.fr       */
-/*                                                                            																					*/
+/*   Updated: 2025/06/20 17:47:53 by fekandle         ###   ########.fr       */
+/*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	unsign(unsigned int n, int base, const char *symbols, int fd)
+int	unsign(unsigned long n, unsigned long base, const char *symbols, int fd)
 {
 	int	count;
 

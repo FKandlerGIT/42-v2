@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 20:38:54 by codespace         #+#    #+#             */
-/*   Updated: 2025/06/19 13:35:31 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/20 17:46:58 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ int	print_digit(int n)
 	while (n != 0)
 	{
 		len++;
-		n = n / 10;		// exampl: 1234 is one number, by dividing it i split it in '1' size "chars" that i can count
+		n = n / 10;
 	}
 	ft_putnbr_fd(m, 1);
 	return (len);

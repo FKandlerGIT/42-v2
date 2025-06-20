@@ -6,33 +6,36 @@
 #    By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/06/11 14:00:36 by fekandle          #+#    #+#              #
-#    Updated: 2025/06/11 14:22:00 by fekandle         ###   ########.fr        #
+#    Updated: 2025/06/20 16:01:25 by fekandle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME =	libftprintf.a
-CC =	cc
-CFLAGS =	-Wall -Wextra -Werror
-SRC =	$(wildcard *.c)
-OBJ =	$(SRC: .c = .o)
-LIBFT	=	libft
-LIBFT_MAKE	=	make -C $(LIBFT)
+NAME = libftprintf.a
+CC = gcc
+CFLAGS = -Wall -Wextra -Werror
+SRC = $(wildcard *.c) 
+OBJ = $(SRC:.c=.o)
+LIBFT = Libft
+LIBFT_MAKE = make -C $(LIBFT)
 
-all:	$(OBJ)
+all: $(NAME)
 
-$(NAME):	$(OBJ)
-					$(LIBFT_MAKE)
-					$(AR)	rcs	$(NAME)	$(OBJ)
+$(NAME): $(OBJ) $(LIBFT)/libft.a
+	$(AR) rcs $(NAME) $(OBJ) $(LIBFT)/libft.a
+	
+$(LIBFT)/libft.a:
+		$(LIBFT_MAKE)
 
-%.o:	%.c
-					$(CC)	$(CFLAGS)	-c	$<	-o	$@
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
 
 clean:
-					rm	-f	$(OBJ)
-					$(LIBFT_MAKE) clean
+	rm -f $(OBJ)
+	$(LIBFT_MAKE) clean
 
-fclean:		clean
-					rm	-f	$(NAME)
-					$(LIBFT_MAKE) fclean
+fclean: clean
+	rm -f $(NAME)
+	$(LIBFT_MAKE) fclean
 
-re:		fclean	all
+re: fclean all

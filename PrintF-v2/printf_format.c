@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 21:41:10 by codespace         #+#    #+#             */
-/*   Updated: 2025/06/19 17:53:03 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/20 17:47:27 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ int	print_format(char format, va_list args)
 		return (unsign(va_arg(args, unsigned int), 16, "0123456789ABCDEF", 1));
 	else if (format == 'u')
 		return (unsign(va_arg(args, unsigned int), 10, "0123456789", 1));
+	else if (format == '%')
+		return (print_percent());
+	else if (format == 'p')
+		return (print_ptr(va_arg(args, void *)));
 	return (0);
 }
-
-(unsigned int n, int base, const char *symbols, int fd)

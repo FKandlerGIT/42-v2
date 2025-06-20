@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   print_char.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: codespace <codespace@student.42.fr>        +#+  +:+       +#+        */
+/*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/12 21:08:52 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/18 20:19:01 by codespace        ###   ########.fr       */
+/*   Updated: 2025/06/20 17:47:03 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,4 +15,5 @@
 int	print_char(int c)
 {
 	ft_putchar_fd(c, 1);
+	return (1);
 }

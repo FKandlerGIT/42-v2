@@ -1,4 +1,7 @@
 {
 	"editor.insertSpaces": false,
-	"editor.comments.insertSpace": false
+	"editor.comments.insertSpace": false,
+	"files.associations": {
+		"libftprintf.h": "c"
+	}
 }

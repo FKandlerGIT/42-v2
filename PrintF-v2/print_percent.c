@@ -1,29 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   print_percent.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/11 14:24:46 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/20 17:48:23 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/20 16:09:46 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/20 17:46:32 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-# include "Libft/libft.h"
-# include <stdarg.h>
-# include <stdlib.h>
-# include <unistd.h>
-
-int	ft_printf(const char *format, ...);
-int	print_char(int c);
-int	print_format(char sign, va_list ap);
-int	unsign(unsigned int n, unsigned int base, const char *symbols, int fd);
-int	print_str(char *c);
-int	print_ptr(void *p);
-int	print_percent(void);
-
-#endif
+int	print_percent(void)
+{
+	if (write(1, "%", 1) == -1)
+	{
+		return (-1);
+	}
+	return (1);
+}

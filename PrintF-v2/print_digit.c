@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 20:38:54 by codespace         #+#    #+#             */
-/*   Updated: 2025/06/20 18:02:30 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/26 15:10:19 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,23 @@
 
 int	print_digit(int n)
 {
-	int	len;
-	int	m;
+	int		len;
+	long	m;
 
 	m = n;
 	len = 0;
-	if (n == 0)
+	if (m == 0)
 		return (1);
-	if (n < 0)
+	if (m < 0)
 	{
 		len++;
-		n = -n;
+		m = -m;
 	}
-	while (n != 0)
+	while (m != 0)
 	{
 		len++;
-		n = n / 10;
+		m = m / 10;
 	}
-	ft_putnbr_fd(m, 1);
+	ft_putnbr_fd((long)m, 1);
 	return (len);
 }

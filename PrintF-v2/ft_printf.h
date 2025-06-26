@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/11 14:24:46 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/20 18:04:58 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/06/26 15:06:24 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 
 int	ft_printf(const char *format, ...);
 int	print_char(int c);
-int	print_format(char sign, va_list ap);
+int	print_format(char sign, va_list *ap);
 int	unsign(unsigned long n, unsigned long base, const char *symbols, int fd);
 int	print_str(char *c);
 int	print_ptr(void *p);

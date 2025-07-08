@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/04 20:39:34 by fekandle          #+#    #+#             */
-/*   Updated: 2025/06/19 17:57:55 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/07/07 13:26:31 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ char	*ft_strnstr(const char *dst, const char *src, size_t len)
 	i = 0;
 	if (!src[i])
 		return ((char *)(dst));
+	if (ft_strncmp(dst + i, src, ft_strlen(src)) == 0)
+		return ((char *)(dst + i));
 	while (i + ft_strlen(src) <= maxlen && i <= ft_strlen(dst))
 	{
 		if (ft_strncmp(dst + i, src, ft_strlen(src)) == 0)

@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/18 20:38:54 by codespace         #+#    #+#             */
-/*   Updated: 2025/06/26 15:10:19 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/07/01 13:46:41 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,10 @@ int	print_digit(int n)
 	m = n;
 	len = 0;
 	if (m == 0)
+	{
+		ft_putnbr_fd(0, 1);
 		return (1);
+	}
 	if (m < 0)
 	{
 		len++;
@@ -31,6 +34,6 @@ int	print_digit(int n)
 		len++;
 		m = m / 10;
 	}
-	ft_putnbr_fd((long)m, 1);
+	ft_putnbr_fd((long)n, 1);
 	return (len);
 }

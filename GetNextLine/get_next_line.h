@@ -6,7 +6,7 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/01/17 15:59:17 by fkandler          #+#    #+#             */
-/*   Updated: 2025/06/30 18:23:00 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/07/10 13:52:46 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@
 # define BUFFER_SIZE 42
 
 
-
+void	*ft_calloc(size_t count, size_t size);
 char		*ft_strjoin(char const *str1, char const *str2);
 char		*ft_strchr(const char *s, int c);
 char		*get_next_line(int fd);

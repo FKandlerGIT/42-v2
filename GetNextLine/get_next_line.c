@@ -33,16 +33,27 @@ typedef struct get_next_line
 
 char	*resize(char *origin, char *buffer_a)
 {
-	char	*buffer;
-
-	buffer = ft_calloc(ft_strlen(origin) + 1, 1);
-	ft_strlcpy(buffer, origin, ft_strlen(origin) + 1);
+	char	*new_origin;
+	if (!origin && !buffer_a)
+	return (NULL);
+	if(origin == NULL)
+	{
+		new_origin = ft_calloc(ft_strlen(buffer_a) + 1,1);
+		ft_strlcpy(new_origin, buffer_a, ft_strlen(buffer_a) + 1);
+	}
+	else if (buffer_a == NULL)
+	{
+		new_origin = ft_calloc(ft_strlen(origin) + 1,1);
+		ft_strlcpy(new_origin, origin, ft_strlen(origin) + 1);
+	}
+	else
+	{
+		new_origin = ft_calloc(ft_strlen(origin) + ft_strlen(buffer_a) + 1, 1);
+		ft_strlcpy(new_origin, origin, ft_strlen(origin) + 1);
+		ft_strlcat(new_origin, buffer_a, ft_strlen(origin) + ft_strlen(buffer_a) + 1);
+	}
 	free(origin);
-	origin = ft_calloc(ft_strlen(buffer) + ft_strlen(buffer_a) + 1, 1);
-	ft_strlcpy(origin, buffer, ft_strlen(buffer) + 1);
-	ft_strlcat(origin, buffer_a, ft_strlen(buffer) + ft_strlen(buffer_a) + 1);
-	free(buffer);
-	return (origin);
+	return (new_origin);
 }
 void	*ft_calloc(size_t count, size_t size)
 {
@@ -89,10 +100,10 @@ char	*get_next_line(int fd)
 		else
 		{
 			free(data.temp2);
-			data.temp2 = ft_calloc((data.newline_ptr - data.buffer2) + 1,
+			data.temp2 = ft_calloc((data.newline_ptr - data.buffer2) + 2,
 					sizeof(char));
 			ft_strlcpy(data.temp2, data.buffer2, (data.newline_ptr
-					- data.buffer2 + 1));
+					- data.buffer2 + 2));
 			data.output = ft_calloc(ft_strlen(temp) + 1, sizeof(char));
 			ft_strlcpy(data.output, temp, ft_strlen(temp) + 1);
 			data.output = resize(data.output, data.temp2);

@@ -18,11 +18,7 @@ typedef struct get_next_line
 	int		fd;
 	size_t	size;
 	size_t	count;
-	size_t	bytes_read;
-	size_t	len_buffer;
-	size_t	len_buffer2;
-	size_t	len_temp;
-	size_t	len_temp2;
+	ssize_t	bytes_read;
 
 	char	*buffer;
 	char	*buffer_a;
@@ -77,6 +73,30 @@ void	*ft_calloc(size_t count, size_t size)
 	}
 	return (ptr);
 }
+char	*gnl_helper(int fd, char *temp, t_gnl *data)
+{
+while (temp && !ft_strchr(temp, '\n'))
+	{
+		data.bytes_read = read(fd, data.buffer2, BUFFER_SIZE);
+		if (data.bytes_read <= 0)
+			break ;
+		data.buffer2[data.bytes_read] = '\0';
+		data.newline_ptr = ft_strchr(data.buffer2, '\n');
+		if (!data.newline_ptr)
+			temp = resize(temp, data.buffer2);
+		else
+		{
+			data.temp2 = ft_calloc((data.newline_ptr - data.buffer2) + 2,
+					sizeof(char));
+			ft_strlcpy(data.temp2, data.buffer2, (data.newline_ptr
+					- data.buffer2 + 2));
+			data.output = resize(temp, data.temp2);
+			temp = NULL;
+			temp = resize(NULL, data.newline_ptr + 1);
+		}
+	}
+	return (temp);
+}
 char	*get_next_line(int fd)
 {
 	t_gnl		data;
@@ -85,37 +105,10 @@ char	*get_next_line(int fd)
 	data.temp2 = NULL;
 	if (fd < 0 || BUFFER_SIZE <= 0)
 		return (NULL);
-	if (!temp)
-		temp = ft_calloc(1, 1);
 	data.buffer2 = ft_calloc(BUFFER_SIZE + 1, sizeof(char));
-	while (temp && !ft_strchr(temp, '\n'))
-	{
-		data.bytes_read = read(fd, data.buffer2, BUFFER_SIZE);
-		data.buffer2[data.bytes_read] = '\0';
-		if (data.bytes_read <= 0)
-			break ;
-		data.newline_ptr = ft_strchr(data.buffer2, '\n');
-		if (!ft_strchr(data.buffer2, '\n'))
-			temp = resize(temp, data.buffer2);
-		else
-		{
-			free(data.temp2);
-			data.temp2 = ft_calloc((data.newline_ptr - data.buffer2) + 2,
-					sizeof(char));
-			ft_strlcpy(data.temp2, data.buffer2, (data.newline_ptr
-					- data.buffer2 + 2));
-			data.output = ft_calloc(ft_strlen(temp) + 1, sizeof(char));
-			ft_strlcpy(data.output, temp, ft_strlen(temp) + 1);
-			data.output = resize(data.output, data.temp2);
-			free(temp);
-			temp = ft_calloc(ft_strlen(data.newline_ptr + 1) + 1, sizeof(char));
-			ft_strlcpy(temp, data.newline_ptr + 1, ft_strlen(data.newline_ptr
-					+ 1) + 1);
-			if (!temp)
-				return (NULL);
-			break ;
-		}
-	}
+	if (!data.buffer2)
+	return (NULL);
+	temp = gnl_helper(fd, temp, &data);
 	free(data.buffer2);
 	if (!data.output && temp && *temp != '\0')
 	{

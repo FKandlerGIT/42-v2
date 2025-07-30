@@ -1,5 +1,0 @@
-um host und vm zu connecten:	 shh -p 4242 fekandle@10.12.250.106 (in teriminal)
-ip a (um die aktuelle ip auslesen zu koennen)
-sudo ss -tnp | grep 4242
-
-change passwort rules, (not done yet, as i dont want to change my pw every so often)

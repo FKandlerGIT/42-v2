@@ -6,11 +6,10 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 19:59:14 by fekandle          #+#    #+#             */
-/*   Updated: 2025/07/30 19:59:22 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/08/03 19:09:02 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft-v2/libft.h"
 #include "PrintF-v2/ft_printf.h"
 #include <signal.h>
 #include <stdio.h>
@@ -37,7 +36,7 @@ void	allocate_buffer(char c)
 {
 	char	*new_buffer;
 
-	new_buffer = calloc(g_global.Index + 2, sizeof(char));
+	new_buffer = ft_calloc(g_global.Index + 2, sizeof(char));
 	if (new_buffer == NULL)
 	{
 		exit(EXIT_FAILURE);

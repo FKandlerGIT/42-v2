@@ -6,11 +6,10 @@
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/03/06 15:56:21 by fkandler          #+#    #+#             */
-/*   Updated: 2025/07/30 19:59:56 by fekandle         ###   ########.fr       */
+/*   Updated: 2025/08/03 19:08:54 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Libft-v2/libft.h"
 #include "PrintF-v2/ft_printf.h"
 #include <signal.h>
 #include <stdio.h>

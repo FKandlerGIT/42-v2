@@ -5,38 +5,38 @@
 #                                                     +:+ +:+         +:+      #
 #    By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/03/06 19:31:47 by fkandler          #+#    #+#              #
-#    Updated: 2025/08/01 14:15:01 by fekandle         ###   ########.fr        #
+#    Created: 2025/06/11 14:00:36 by fekandle          #+#    #+#              #
+#    Updated: 2025/09/02 15:16:03 by fekandle         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = minitalk
-CLIENT = client
-SERVER = server
-
-PRINTF_DIR = PrintF-v2
-PRINTF = $(PRINTF_DIR)/libftprintf.a
-
+NAME = pushswab.a
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
+SRC = list_prep.c main.c  sort.c stack_operations.c validation.c ps_helper.c 
+OBJ = $(SRC:.c=.o)
+LIBFT = Libft-v2
+LIBFT_MAKE = make -C $(LIBFT)
 
-all: $(CLIENT) $(SERVER)
+all: $(NAME)
 
-$(PRINTF):
-	$(MAKE) -C $(PRINTF_DIR)
+$(NAME): $(OBJ) $(LIBFT)/libft.a
+	cp $(LIBFT)/libft.a $(NAME)
+	$(AR) rcs $(NAME) $(OBJ) 
+	
+$(LIBFT)/libft.a:
+		$(LIBFT_MAKE)
 
-$(CLIENT): ft_client.c | $(PRINTF)
-	$(CC) $(CFLAGS) ft_client.c -L$(PRINTF_DIR) -lftprintf -o $(CLIENT)
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
-$(SERVER): ft_server.c | $(PRINTF)
-	$(CC) $(CFLAGS) ft_server.c -L$(PRINTF_DIR) -lftprintf -o $(SERVER)
 
 clean:
-	$(MAKE) -C $(PRINTF_DIR) clean
+	rm -f $(OBJ)
+	$(LIBFT_MAKE) clean
 
 fclean: clean
-	rm -f $(CLIENT) $(SERVER)
-	$(MAKE) -C $(PRINTF_DIR) fclean
+	rm -f $(NAME)
+	$(LIBFT_MAKE) fclean
 
 re: fclean all
-	

@@ -1,26 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_minitalk.h                                      :+:      :+:    :+:   */
+/*   print_percent.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fekandle <fekandle@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/07/30 19:58:57 by fekandle          #+#    #+#             */
-/*   Updated: 2025/07/30 19:59:32 by fekandle         ###   ########.fr       */
+/*   Created: 2025/06/20 16:09:46 by fekandle          #+#    #+#             */
+/*   Updated: 2025/06/20 18:02:36 by fekandle         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef FT_MINITALK_H
-# define FT_MINITALK_H
+#include "ft_printf.h"
 
-# include "Libft-v2/libft.h"
-# include "PrintF-v2/ft_printf.h"
-# include "ft_client.c"
-# include <signal.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <sys/types.h>
-# include <sys/wait.h>
-# include <unistd.h>
-
-#endif
+int	print_percent(void)
+{
+	if (write(1, "%", 1) == -1)
+	{
+		return (-1);
+	}
+	return (1);
+}

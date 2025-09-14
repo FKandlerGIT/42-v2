@@ -1,5 +1,0 @@
-Hello, this is line one.
-This is line two with a newline at the end.
-
-This line is after an empty line.
-Last line without newline at the end
